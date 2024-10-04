@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support für Find Your Waifu.">
+    <title>Support - Finde Deine Waifu</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #121212; /* Dunkler Hintergrund */
+            color: #e0e0e0; /* Helle Schrift */
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e1e1e, #383838);
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 0 0 20px 20px; /* Runde Ecken unten */
+            animation: fadeIn 1s ease-in;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            transition: transform 0.5s;
+        }
+
+        header h1:hover {
+            transform: scale(1.05);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center; /* Zentrierte Navigation */
+            align-items: center;
+            background: #1e1e1e;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap; /* Flex-wrap für mobile Ansicht */
+            border-radius: 0 0 20px 20px; /* Runde Ecken oben */
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
+            margin: 5px; /* Abstand für mobile Ansicht */
+        }
+
+        .nav-links a:hover {
+            background: #383838;
+            color: #007aff;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Main Container */
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Support Section */
+        .support-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .support-item {
+            background: #1f1f1f; /* Dunkle Box */
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer; /* Zeige, dass die Box anklickbar ist */
+        }
+
+        .support-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .support-title {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #007aff; /* Titelfarbe */
+            font-weight: bold; /* Fett für die Titel */
+        }
+
+        .support-description {
+            font-size: 0.9em;
+            color: #e0e0e0; /* Beschreibung Farbe */
+        }
+
+        /* Buttons */
+        .support-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #007aff; /* Primärfarbe */
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .support-button:hover {
+            background: #0051a8;
+            transform: translateY(-3px); /* Leichter Anhebeeffekt */
+        }
+
+        /* Email and Discord Buttons */
+        .email-button {
+            background: #28a745; /* Grüne Farbe für E-Mail */
+        }
+
+        .email-button:hover {
+            background: #218838; /* Dunklere Grüne Farbe */
+        }
+
+        .discord-button {
+            background: #5865f2; /* Discord Blau */
+        }
+
+        .discord-button:hover {
+            background: #4e5cd1; /* Dunkleres Blau */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+            border-radius: 20px 20px 0 0; /* Runde Ecken oben */
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em; /* Kleinere Schrift für mobile Geräte */
+            }
+
+            .support-item {
+                width: 90%; /* Breitere Boxen für mobile Geräte */
+                margin: 10px 0; /* Weniger Abstand */
+            }
+
+            nav {
+                flex-direction: column; /* Navigation untereinander auf mobilen Geräten */
+                align-items: flex-start; /* Links ausrichten */
+            }
+
+            .nav-links {
+                display: none; /* Verstecke Links standardmäßig */
+                flex-direction: column; /* Links untereinander */
+                width: 100%; /* Volle Breite */
+            }
+
+            .nav-links.active {
+                display: flex; /* Zeige Links, wenn aktiv */
+            }
+
+            .menu-toggle {
+                display: block; /* Zeige Menü-Button */
+                color: #e0e0e0;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Support für Finde Deine Waifu</h1>
+        <p>Hilfe und Kontaktinformationen!</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="find_your_waifu.html">Find Your Waifu</a>
+            <a href="about.html">Über uns</a>
+            <a href="support.html">Support</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Kontaktiere uns:</h2>
+        <div class="support-section">
+            <div class="support-item">
+                <div class="support-title">E-Mail Support</div>
+                <div class="support-description">Hast du Fragen oder benötigst du Hilfe? Schreibe uns eine E-Mail:</div>
+                <a href="mailto:support@findyourwaifu.de" class="support-button email-button">E-Mail senden</a>
+            </div>
+            <div class="support-item">
+                <div class="support-title">Discord Support</div>
+                <div class="support-description">Tritt unserem Discord-Server bei und chatte direkt mit uns:</div>
+                <a href="https://discord.gg/https://discord.gg/mN3Vj6v7VV" class="support-button discord-button">Discord Server</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Finde Deine Waifu. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
