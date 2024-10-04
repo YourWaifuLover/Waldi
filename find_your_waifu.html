@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finde Deine Waifu - Kategorienübersicht">
+    <title>Finde Deine Waifu - Kategorien</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #121212; /* Dunkler Hintergrund */
+            color: #e0e0e0; /* Helle Schrift */
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background: #383838;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007aff;
+        }
+
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007aff; /* Blaue Farbe für Logo */
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e1e1e, #383838);
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 0 0 20px 20px; /* Runde Ecken unten */
+            animation: fadeIn 1s ease-in;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            transition: transform 0.5s;
+        }
+
+        header h1:hover {
+            transform: scale(1.05);
+        }
+
+        /* Main Container */
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .container h2 {
+            color: #007aff; /* Blaue Farbe für die Überschrift */
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .container p.description {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #b0b0b0;
+        }
+
+        /* Button Styles */
+        .category-button {
+            display: inline-block;
+            background-color: #383838;
+            color: #e0e0e0;
+            padding: 20px 50px;
+            margin: 20px;
+            font-size: 1.5em;
+            text-decoration: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+
+        .category-button:hover {
+            background-color: #007aff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+            border-radius: 20px 20px 0 0; /* Runde Ecken oben */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em; /* Kleinere Schrift für mobile Geräte */
+            }
+
+            .category-button {
+                font-size: 1.2em;
+                padding: 15px 30px;
+            }
+
+            nav a {
+                font-size: 1em; /* Kleinere Schrift für Navigationslinks auf mobilen Geräten */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Finde Deine Waifu</a>
+        <div>
+            <a href="index.html">Startseite</a>
+            <a href="find_your_waifu.html">Find your Waifu</a>
+            <a href="about.html">Über uns</a>
+            <a href="support.html">Support</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Finde Deine Waifu - Kategorien</h1>
+        <p>Wähle eine der Hauptkategorien aus, um Deine perfekte Waifu zu finden!</p>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Kategorienübersicht</h2>
+        <p class="description">
+            Wähle eine der folgenden Hauptkategorien aus, um fortzufahren und Deine ideale Waifu zu entdecken. Ob angezogen oder nackt, hier findest du alles, was du suchst.
+        </p>
+        <!-- Category Buttons -->
+        <a href="angezogen.html" class="category-button">Angezogen</a>
+        <a href="nackt.html" class="category-button">Nackt</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Finde Deine Waifu. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>

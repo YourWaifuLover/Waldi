@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Finde deine Waifu - Deine perfekte heiße Wichs Vorlage!">
-    <title>Finde Deine Waifu</title>
+    <meta name="description" content="Nackt Arsch - Wähle deinen Charakter!">
+    <title>Nackt Arsch Kategorien</title>
     <link rel="icon" href="logo.ico" type="image/x-icon">
     <style>
         /* Global Styles */
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #121212; /* Dunkler Hintergrund */
             color: #e0e0e0; /* Helle Schrift */
             scroll-behavior: smooth;
@@ -19,8 +19,8 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #1e1e1e, #383838);
-            padding: 80px 20px;
+            background: linear-gradient(135deg, #2a2a2a, #3c3c3c);
+            padding: 60px 20px;
             color: white;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -38,12 +38,6 @@
             transform: scale(1.05);
         }
 
-        header p {
-            margin: 10px 0;
-            font-size: 1.5em;
-            opacity: 0.8;
-        }
-
         /* Navigation */
         nav {
             display: flex;
@@ -55,7 +49,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            flex-wrap: wrap; /* Flex-wrap für mobile Ansicht */
             border-radius: 0 0 20px 20px; /* Runde Ecken oben */
         }
 
@@ -70,17 +63,12 @@
             padding: 10px 20px;
             border-radius: 30px;
             transition: background 0.3s ease, color 0.3s ease;
-            margin: 5px; /* Abstand für mobile Ansicht */
+            margin: 5px;
         }
 
         .nav-links a:hover {
             background: #383838;
             color: #007aff;
-        }
-
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
         }
 
         /* Main Container */
@@ -89,57 +77,52 @@
             text-align: center;
         }
 
-        /* Waifu Section */
-        .waifu-section {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+        /* Characters Section */
+        .character-section {
             margin: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .waifu-item {
+        .character-item {
             background: #1f1f1f; /* Dunkle Box */
             border-radius: 10px;
             padding: 20px;
-            width: 250px;
-            margin: 20px;
+            margin: 15px;
+            width: 200px; /* Feste Breite */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer; /* Zeige, dass die Box anklickbar ist */
-            position: relative;
+            position: relative; /* Position für Animation */
+            overflow: hidden; /* Verstecke Überlauf */
         }
 
-        .waifu-item:hover {
+        .character-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .waifu-title {
+        .character-title {
             font-size: 1.5em;
             margin: 10px 0;
             color: #007aff; /* Titelfarbe */
             font-weight: bold; /* Fett für die Titel */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Schatten für den Titel */
         }
 
-        .waifu-description {
-            font-size: 0.9em;
-            color: #e0e0e0; /* Beschreibung Farbe */
+        .character-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1); /* Halbdurchsichtiger Hintergrund */
+            transition: transform 0.3s;
         }
 
-        /* Buttons */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #007aff;
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .button:hover {
-            background: #0051a8;
+        .character-item:hover .character-background {
+            transform: scale(1.1); /* Vergrößern beim Hover */
         }
 
         /* Footer */
@@ -167,11 +150,6 @@
                 font-size: 2.5em; /* Kleinere Schrift für mobile Geräte */
             }
 
-            .waifu-item {
-                width: 90%; /* Breitere Boxen für mobile Geräte */
-                margin: 10px 0; /* Weniger Abstand */
-            }
-
             nav {
                 flex-direction: column; /* Navigation untereinander auf mobilen Geräten */
                 align-items: flex-start; /* Links ausrichten */
@@ -187,12 +165,8 @@
                 display: flex; /* Zeige Links, wenn aktiv */
             }
 
-            .menu-toggle {
-                display: block; /* Zeige Menü-Button */
-                color: #e0e0e0;
-                padding: 10px;
-                cursor: pointer;
-                font-size: 1.5em;
+            .character-item {
+                width: 90%; /* Breite für mobile Geräte */
             }
         }
     </style>
@@ -200,8 +174,8 @@
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Finde deine Waifu</h1>
-        <p>Deine perfekte heiße Wichsvorlage!</p>
+        <h1>Nackt Arsch Kategorien</h1>
+        <p>Wähle deinen Charakter!</p>
     </header>
 
     <!-- Navigation Bar -->
@@ -209,7 +183,7 @@
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="find_your_waifu.html">Find Your Waifu</a>
+            <a href="nackt.html">Kategorien</a>
             <a href="about.html">Über uns</a>
             <a href="support.html">Support</a>
         </div>
@@ -217,34 +191,30 @@
 
     <!-- Main Container -->
     <div class="container">
-        <h2>Unsere besten Waifus:</h2>
-        <div class="waifu-section">
-            <div class="waifu-item" onclick="window.location.href='find_your_waifu.html'">
-                <div class="waifu-title">Arsch Waifu</div>
-                <div class="waifu-description">Die ultimative Waifu für alle Liebhaber von runden Formen!</div>
+        <h2>Wähle deinen Charakter:</h2>
+        <div class="character-section">
+            <div class="character-item" onclick="alert('Charakter: Dominant ausgewählt!')">
+                <div class="character-background"></div>
+                <div class="character-title">Dominant</div>
             </div>
-            <div class="waifu-item" onclick="window.location.href='find_your_waifu.html'">
-                <div class="waifu-title">Titten Waifu</div>
-                <div class="waifu-description">Für die, die das Besondere an weiblicher Eleganz schätzen.</div>
+            <div class="character-item" onclick="alert('Charakter: Pervers ausgewählt!')">
+                <div class="character-background"></div>
+                <div class="character-title">Pervers</div>
             </div>
-            <div class="waifu-item" onclick="window.location.href='find_your_waifu.html'">
-                <div class="waifu-title">Pussy Waifu</div>
-                <div class="waifu-description">Entdecke die süßeste Waifu für deine Fantasien!</div>
+            <div class="character-item" onclick="alert('Charakter: Verspielt ausgewählt!')">
+                <div class="character-background"></div>
+                <div class="character-title">Verspielt</div>
             </div>
-            <div class="waifu-item" onclick="window.location.href='find_your_waifu.html'">
-                <div class="waifu-title">Fuß Waifu</div>
-                <div class="waifu-description">Für die Füße-Liebhaber, die das Besondere suchen!</div>
-            </div>
-            <div class="waifu-item" onclick="window.location.href='find_your_waifu.html'">
-                <div class="waifu-title">Weitere Waifus</div>
-                <div class="waifu-description">Entdecke viele weitere spannende Waifus!</div>
+            <div class="character-item" onclick="alert('Charakter: Sensibel ausgewählt!')">
+                <div class="character-background"></div>
+                <div class="character-title">Sensibel</div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Finde deine Waifu. Alle Rechte vorbehalten. Es gelten unsere <a href="agb.html" style="color: #007aff;">Nutzungsbedingungen</a>.</p>
+        <p>&copy; 2024 Find your Waifu. Alle Rechte vorbehalten. Es gelten unsere <a href="agb.html">AGB</a></p>
     </footer>
 
     <script>
