@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Über das Find Your Waifu Entwicklerteam.">
+    <title>Über uns - Find Your Waifu</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif; /* Neue Schriftart */
+            background-color: #121212; /* Dunkler Hintergrund */
+            color: #e0e0e0; /* Helle Schrift */
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e1e1e, #383838);
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 0 0 20px 20px; /* Runde Ecken unten */
+            animation: fadeIn 1s ease-in;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            transition: transform 0.5s;
+            letter-spacing: 2px; /* Abstand zwischen den Buchstaben */
+        }
+
+        header h1:hover {
+            transform: scale(1.05);
+            color: #007aff; /* Hover-Farbe */
+        }
+
+        header p {
+            margin: 10px 0;
+            font-size: 1.5em;
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center; /* Zentrierte Navigation */
+            align-items: center;
+            background: #1e1e1e;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap; /* Flex-wrap für mobile Ansicht */
+            border-radius: 0 0 20px 20px; /* Runde Ecken oben */
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
+            margin: 5px; /* Abstand für mobile Ansicht */
+            font-weight: 600; /* Fetterer Text */
+        }
+
+        .nav-links a:hover {
+            background: #383838;
+            color: #007aff;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Main Container */
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Box Styles */
+        .box {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%; /* Breite der Box */
+            max-width: 600px; /* Maximalbreite */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Tieferer Schatten beim Hover */
+        }
+
+        .box h3 {
+            font-size: 1.8em; /* Größe der Überschrift in Boxen */
+            margin-bottom: 15px;
+            color: #007aff; /* Titel-Farbe */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+            border-radius: 20px 20px 0 0; /* Runde Ecken oben */
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em; /* Kleinere Schrift für mobile Geräte */
+            }
+
+            nav {
+                flex-direction: column; /* Navigation untereinander auf mobilen Geräten */
+                align-items: flex-start; /* Links ausrichten */
+            }
+
+            .nav-links {
+                display: none; /* Verstecke Links standardmäßig */
+                flex-direction: column; /* Links untereinander */
+                width: 100%; /* Volle Breite */
+            }
+
+            .nav-links.active {
+                display: flex; /* Zeige Links, wenn aktiv */
+            }
+
+            .menu-toggle {
+                display: block; /* Zeige Menü-Button */
+                color: #e0e0e0;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Über uns</h1>
+        <p>Wir sind das Find Your Waifu Entwicklerteam</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="find_your_waifu.html">Find Your Waifu</a>
+            <a href="about.html">Über uns</a>
+            <a href="support.html">Support</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Unsere Geschichte</h2>
+        <div class="box">
+            <h3>Von der Leidenschaft zur Plattform</h3>
+            <p>Das Find Your Waifu Team wurde aus der Leidenschaft für Anime und das Streben nach kreativen Lösungen geboren. Unsere Geschichte begann als einfaches Projekt unter Freunden, die ihre Faszination für Anime mit der Welt teilen wollten.</p>
+            <p>Im Jahr 2023 kamen wir zusammen, um eine Plattform zu schaffen, die es jedem ermöglicht, seine perfekte Waifu zu finden. Durch innovative Technologien und eine benutzerfreundliche Oberfläche haben wir es uns zur Aufgabe gemacht, jedem Fan die Suche nach seiner idealen Waifu zu erleichtern.</p>
+        </div>
+
+        <h2>Unsere Vision</h2>
+        <div class="box">
+            <h3>Die perfekte Seite für Waifu-Fetischisten</h3>
+            <p>Unsere Vision ist es, die perfekte Seite für Waifu-Fetischisten zu schaffen. Wir wollen eine Plattform bieten, die es jedem ermöglicht, seine Träume und Vorlieben auszuleben. Egal, ob du nach Inspiration suchst oder einfach nur Spaß haben möchtest – wir sind hier, um dir zu helfen, die perfekte Waifu zu finden!</p>
+        </div>
+
+        <h2>Unser Entwicklerteam</h2>
+        <div class="box">
+            <h3>Leidenschaftliche Entwickler und Anime-Enthusiasten</h3>
+            <p>Unser Team besteht aus leidenschaftlichen Entwicklern und Anime-Enthusiasten, die zusammenarbeiten, um eine kreative und sichere Plattform für unsere Nutzer zu schaffen. Wir sind stets bemüht, die besten Funktionen anzubieten und das Nutzererlebnis kontinuierlich zu verbessern.</p>
+            <p>Gemeinsam bringen wir die Liebe zu Anime in die digitale Welt und freuen uns darauf, mit unserer Community zu wachsen!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Find Your Waifu. Alle Rechte vorbehalten. Es gelten unsere <a href="agb.html">AGB</a>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active'); // Toggle die Sichtbarkeit der Links
+        }
+    </script>
+</body>
+</html>
